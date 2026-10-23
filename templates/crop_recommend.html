@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+{% block pagetitle %}Crop Recommendation - Smart Agriculture{% endblock pagetitle %}
+
+{% block body %}
+<div class="container py-4">
+  <!-- Title -->
+  <div class="text-center my-4">
+    <h1 class="display-5 fw-bold text-success mb-1">
+      🌱 Smart Crop Recommendation 🌱
+    </h1>
+    <p class="lead text-secondary fw-semibold">
+      Find optimal crops based on soil characteristics, climate, and seasonal conditions
+    </p>
+  </div>
+
+  <div class="row g-4">
+    <!-- Filter Card -->
+    <div class="col-lg-4">
+      <div class="agri-card p-4">
+        <h5 class="fw-bold text-dark border-bottom pb-2 mb-3">
+          <i class="bi bi-sliders text-success me-2"></i>Soil & Season Filter
+        </h5>
+
+        <div class="mb-3">
+          <label for="soilSelect" class="form-label fw-semibold text-secondary small">Select Soil Type:</label>
+          <select id="soilSelect" class="form-select" onchange="filterCrops()">
+            <option value="all">All Soil Types</option>
+            {% for stype in soil_types %}
+            <option value="{{ stype }}">{{ stype }}</option>
+            {% endfor %}
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label for="seasonSelect" class="form-label fw-semibold text-secondary small">Growing Season:</label>
+          <select id="seasonSelect" class="form-select" onchange="filterCrops()">
+            <option value="all">All Seasons</option>
+            <option value="Kharif">Kharif (Monsoon / Autumn)</option>
+            <option value="Rabi">Rabi (Winter / Spring)</option>
+            <option value="Year-round">Year-round / Perennial</option>
+          </select>
+        </div>
+
+        <div class="p-3 bg-light rounded small text-secondary">
+          <i class="bi bi-info-circle text-primary me-1"></i>
+          <strong>Agri Tip:</strong> Clayey and loamy soils with pH between 5.5 and 6.5 provide maximum nutrient retention and moisture holding capacity for rice cultivation.
+        </div>
+      </div>
+    </div>
+
+    <!-- Crops Display Grid -->
+    <div class="col-lg-8">
+      <div class="row g-4" id="cropGrid">
+        {% for crop in crops %}
+        <div class="col-md-6 crop-card-item" data-soil="{{ crop.soil_type | join(',') }}" data-season="{{ crop.season }}">
+          <div class="agri-card p-4 h-100 d-flex flex-column">
+            <div class="d-flex align-items-center mb-3">
+              <span class="fs-1 me-3">{{ crop.icon }}</span>
+              <div>
+                <h5 class="fw-bold text-dark mb-0">{{ crop.name }}</h5>
+                <span class="badge bg-success-subtle text-success border border-success">{{ crop.season }}</span>
+              </div>
+            </div>
+
+            <p class="text-secondary small mb-3 flex-grow-1">{{ crop.description }}</p>
+
+            <ul class="list-unstyled small text-secondary mb-3">
+              <li class="mb-1"><strong>Soil:</strong> {{ crop.soil_type | join(', ') }}</li>
+              <li class="mb-1"><strong>pH Range:</strong> {{ crop.ph_range }}</li>
+              <li class="mb-1"><strong>Water Need:</strong> {{ crop.water_requirement }}</li>
+              <li class="mb-1"><strong>Yield:</strong> {{ crop.yield }}</li>
+              <li><strong>Varieties:</strong> {{ crop.popular_varieties | join(', ') }}</li>
+            </ul>
+
+            <div class="mt-auto pt-2 border-top">
+              <a href="/crop-planning" class="btn btn-outline-success btn-sm w-100 rounded-pill">
+                View Crop Plan &rarr;
+              </a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+function filterCrops() {
+  const soil = document.getElementById('soilSelect').value;
+  const season = document.getElementById('seasonSelect').value;
+  const items = document.querySelectorAll('.crop-card-item');
+
+  items.forEach(item => {
+    const itemSoil = item.getAttribute('data-soil');
+    const itemSeason = item.getAttribute('data-season');
+    
+    const matchesSoil = (soil === 'all') || itemSoil.includes(soil);
+    const matchesSeason = (season === 'all') || itemSeason.includes(season);
+
+    if (matchesSoil && matchesSeason) {
+      item.style.display = 'block';
+    } else {
+      item.style.display = 'none';
+    }
+  });
+}
+</script>
+{% endblock body %}

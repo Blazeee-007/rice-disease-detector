@@ -1,0 +1,135 @@
+{% extends 'base.html' %}
+{% block pagetitle %}AI Engine - Detect Rice Leaf Disease{% endblock pagetitle %}
+
+{% block body %}
+<div class="container py-4">
+  <!-- Header matching Chapter 6 & 7 -->
+  <div class="row mb-4 text-center">
+    <div class="col-lg-10 mx-auto">
+      <h1 class="display-5 fw-bold text-success mb-1">
+        🍀 AI Engine 🍀
+      </h1>
+      <p class="lead text-secondary fw-semibold">
+        Let AI Engine Help You Detect Disease
+      </p>
+    </div>
+  </div>
+
+  <div class="row g-4 align-items-stretch">
+    <!-- Left Column: Why Detect Rice Leaf Disease? -->
+    <div class="col-lg-4 col-md-6">
+      <div class="agri-card p-4 h-100 d-flex flex-column justify-content-between">
+        <div>
+          <h5 class="fw-bold text-dark border-bottom pb-2">
+            <i class="bi bi-question-circle-fill text-success me-2"></i>Why Detect Rice Leaf Disease?
+          </h5>
+          <p class="text-secondary mt-3">
+            Rice leaf diseases affect crop yield and grain quality. Bacterial blight, leaf blast, and brown spot can decimate 10% to 50% of the entire field if undetected.
+          </p>
+          <p class="text-secondary">
+            Early and accurate detection enables timely treatment with precise bactericides/fungicides, preventing widespread contagion, saving precious resources, and maximizing harvest productivity.
+          </p>
+        </div>
+
+        <div class="mt-4 pt-3 border-top text-center">
+          <button type="button" onclick="googleTranslateElementInit()" class="btn btn-outline-primary btn-sm rounded-pill px-3">
+            <i class="bi bi-translate me-1"></i> Translate Page
+          </button>
+          <div id="google_translate_element" style="display: none; text-align: center; margin-top: 15px;"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Middle Column: Upload & Live Camera -->
+    <div class="col-lg-4 col-md-12">
+      <div class="agri-card p-4 h-100">
+        <form action="/submit" method="POST" enctype="multipart/form-data" onsubmit="return validateImage();">
+          
+          <div class="upload-box mb-3">
+            <input type="file" id="actual-btn" hidden name="image" accept="image/*" />
+            
+            <label for="actual-btn" class="btn-upload">
+              <i class="bi bi-cloud-arrow-up me-1"></i> Choose or Drag File
+            </label>
+            
+            <button type="button" id="camera-btn" class="btn-camera">
+              <i class="bi bi-camera me-1"></i> Open Camera
+            </button>
+
+            <div class="mt-2 text-muted small" id="file-chosen">No file chosen</div>
+
+            <!-- Camera Feed Section -->
+            <div id="camera-container">
+              <video id="camera-feed" width="300" height="225" autoplay playsinline></video>
+              <div class="mt-2">
+                <button type="button" id="capture-btn" class="btn btn-primary btn-sm me-2">
+                  <i class="bi bi-camera-fill me-1"></i> Capture Photo
+                </button>
+                <button type="button" id="stop-camera-btn" class="btn btn-outline-secondary btn-sm">
+                  Cancel
+                </button>
+              </div>
+            </div>
+
+            <!-- Image Preview -->
+            <div class="mt-3">
+              <img id="preview" src="#" alt="Image Preview" />
+            </div>
+          </div>
+
+          <h6 class="text-center text-muted small mb-3">
+            Simply upload your plant's leaf image and watch the AI work its magic.
+          </h6>
+
+          <!-- Quick Test Samples -->
+          <div class="mb-3 text-center">
+            <span class="d-block small text-secondary fw-semibold mb-1">Quick Sample Tests:</span>
+            <span class="sample-pill" onclick="loadSampleImage('{{ url_for('static', filename='images/sample_bacterial_blight.jpg') }}', 'sample_bacterial_blight.jpg')">
+              🍂 Bacterial Blight
+            </span>
+            <span class="sample-pill" onclick="loadSampleImage('{{ url_for('static', filename='images/sample_brown_spot.jpg') }}', 'sample_brown_spot.jpg')">
+              🌾 Brown Spot
+            </span>
+            <span class="sample-pill" onclick="loadSampleImage('{{ url_for('static', filename='images/sample_leaf_blast.jpg') }}', 'sample_leaf_blast.jpg')">
+              🌿 Leaf Blast
+            </span>
+            <span class="sample-pill" onclick="loadSampleImage('{{ url_for('static', filename='images/sample_healthy.jpg') }}', 'sample_healthy.jpg')">
+              🌱 Healthy
+            </span>
+          </div>
+
+          <div class="text-center">
+            <button type="submit" id="submit-btn" class="btn btn-outline-success btn-lg px-5 fw-bold rounded-pill">
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Right Column: Prevention Tips & More Info -->
+    <div class="col-lg-4 col-md-6">
+      <div class="agri-card p-4 h-100 d-flex flex-column justify-content-between">
+        <div>
+          <h5 class="fw-bold text-dark border-bottom pb-2">
+            <i class="bi bi-shield-shaded text-success me-2"></i>Prevent Rice leaf Disease:
+          </h5>
+          <ol class="mt-3 text-secondary ps-3" style="line-height: 1.8;">
+            <li><strong>Use clean tools</strong> — Disinfect farming implements between plots.</li>
+            <li><strong>Inspect plants regularly</strong> — Scout leaves weekly during tillering.</li>
+            <li><strong>Use quality soil and fertilizers</strong> — Avoid nitrogen overdosing.</li>
+            <li><strong>Ensure good air circulation</strong> — Maintain recommended hill spacing.</li>
+            <li><strong>Remove infected leaves</strong> — Collect and burn infected plant debris.</li>
+          </ol>
+        </div>
+
+        <div class="mt-4 pt-3 border-top text-center">
+          <a href="/about" class="btn btn-outline-success rounded-pill px-4">
+            <i class="bi bi-info-circle me-1"></i> More Info
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock body %}

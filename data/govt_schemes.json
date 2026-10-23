@@ -1,0 +1,103 @@
+{
+  "schemes": [
+    {
+      "name": "Pradhan Mantri Fasal Bima Yojana (PMFBY)",
+      "category": "Crop Insurance",
+      "description": "Provides financial support to farmers suffering crop loss/damage due to unforeseen events like natural calamities, pests, and diseases.",
+      "benefits": [
+        "Comprehensive risk coverage from pre-sowing to post-harvest",
+        "Low premium rates: 2% for Kharif, 1.5% for Rabi crops",
+        "Quick claim settlement through remote sensing & technology",
+        "Coverage for prevented sowing due to adverse weather"
+      ],
+      "eligibility": "All farmers growing notified crops in notified areas.",
+      "how_to_apply": "Apply through nearest bank, insurance company office, or Common Service Centre (CSC). Also available on PMFBY mobile app.",
+      "website": "https://pmfby.gov.in",
+      "icon": "🛡️",
+      "color": "#3498db"
+    },
+    {
+      "name": "PM-KISAN (PM Kisan Samman Nidhi)",
+      "category": "Direct Income Support",
+      "description": "Provides income support of ₹6,000 per year to all landholding farmer families across India in three equal installments.",
+      "benefits": [
+        "₹6,000 per year transferred directly to bank account",
+        "Paid in 3 installments of ₹2,000 each",
+        "No intermediaries — direct benefit transfer",
+        "Covers all farmer families with cultivable land"
+      ],
+      "eligibility": "All farmer families with cultivable landholding (subject to exclusion criteria).",
+      "how_to_apply": "Register at pmkisan.gov.in or through local Patwari/Revenue Officer or Common Service Centre.",
+      "website": "https://pmkisan.gov.in",
+      "icon": "💰",
+      "color": "#27ae60"
+    },
+    {
+      "name": "Kisan Credit Card (KCC)",
+      "category": "Agricultural Credit",
+      "description": "Provides farmers with affordable and timely credit to meet their agricultural and allied needs including purchase of inputs.",
+      "benefits": [
+        "Short-term credit for crop cultivation expenses",
+        "Post-harvest expenses covered",
+        "Maintenance and allied activities support",
+        "Interest subvention — 2% reduction on timely repayment",
+        "Accidental insurance coverage up to ₹50,000"
+      ],
+      "eligibility": "Farmers, self-help groups, and joint liability groups of farmers.",
+      "how_to_apply": "Apply at any commercial bank, regional rural bank, or cooperative bank.",
+      "website": "https://www.nabard.org/content.aspx?id=572",
+      "icon": "💳",
+      "color": "#9b59b6"
+    },
+    {
+      "name": "National Food Security Mission (NFSM)",
+      "category": "Production Enhancement",
+      "description": "Aims to increase production of rice, wheat, pulses, coarse cereals, and commercial crops through area expansion and productivity enhancement.",
+      "benefits": [
+        "Free/subsidized distribution of quality seeds",
+        "Farm machinery subsidies",
+        "Demonstrations of improved varieties and technologies",
+        "Training programs for farmers",
+        "Subsidy on plant protection chemicals and micronutrients"
+      ],
+      "eligibility": "Farmers in notified districts across India.",
+      "how_to_apply": "Contact local agriculture department office or block-level agriculture officer.",
+      "website": "https://nfsm.gov.in",
+      "icon": "🌾",
+      "color": "#e67e22"
+    },
+    {
+      "name": "Paramparagat Krishi Vikas Yojana (PKVY)",
+      "category": "Organic Farming",
+      "description": "Promotes organic farming practices and helps farmers move towards sustainable and chemical-free agriculture.",
+      "benefits": [
+        "Financial assistance of ₹50,000/ha over 3 years",
+        "₹31,000/ha for organic inputs from farm resources",
+        "₹8,800/ha for certification and quality control",
+        "₹4,000/ha for value addition and marketing",
+        "₹2,000/ha for awareness and capacity building"
+      ],
+      "eligibility": "Farmers willing to convert to organic farming in cluster groups (minimum 20 hectares).",
+      "how_to_apply": "Contact nearest Krishi Vigyan Kendra (KVK) or state agriculture department.",
+      "website": "https://pgsindia-ncof.gov.in",
+      "icon": "🌿",
+      "color": "#1abc9c"
+    },
+    {
+      "name": "Sub-Mission on Agricultural Mechanization (SMAM)",
+      "category": "Farm Mechanization",
+      "description": "Promotes agricultural mechanization by providing subsidies on farm machinery and equipment to individual farmers and Custom Hiring Centres.",
+      "benefits": [
+        "40–50% subsidy on farm equipment for individual farmers",
+        "Up to 80% subsidy for SC/ST/small/marginal farmers",
+        "Financial assistance for Custom Hiring Centres",
+        "Subsidized tractors, power tillers, harvesters and more"
+      ],
+      "eligibility": "All categories of farmers with higher priority to SC/ST/small/marginal farmers.",
+      "how_to_apply": "Apply through state agriculture department or at agrimachinery.nic.in portal.",
+      "website": "https://agrimachinery.nic.in",
+      "icon": "🚜",
+      "color": "#e74c3c"
+    }
+  ]
+}

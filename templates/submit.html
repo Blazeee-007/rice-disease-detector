@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+{% block pagetitle %}{{ title }} - AI Diagnosis Result{% endblock pagetitle %}
+
+{% block body %}
+<div class="container py-4">
+
+  <!-- Diagnosis Result Banner matching Chapter 7 -->
+  <div class="text-center my-3">
+    <h1 class="display-5 fw-bold" style="color: #1b5e20;">
+      {{ title }}
+      {% if 'Bacterial' in title %}🍂{% elif 'Brown' in title %}🌾{% elif 'Blast' in title %}🌿{% else %}🌱{% endif %}
+    </h1>
+    <div class="d-inline-flex align-items-center gap-2 mt-2 px-3 py-1 rounded-pill bg-white shadow-sm border">
+      <span class="small fw-semibold text-muted">Model Confidence:</span>
+      <span class="badge bg-success fs-6">{{ confidence }}%</span>
+      <span class="badge bg-secondary small">MobileNetV2</span>
+    </div>
+  </div>
+
+  <!-- Leaf Image Card in Center -->
+  <div class="row justify-content-center my-4">
+    <div class="col-md-5 text-center">
+      <div class="agri-card p-3 shadow-lg">
+        <img src="{{ user_image_url }}" alt="Diagnosed Leaf" class="img-fluid rounded border" style="max-height: 320px; width: 100%; object-fit: contain; background: #fdfefe;">
+        <div class="mt-2 text-muted small">
+          <i class="bi bi-camera me-1"></i> Analyzed Leaf Sample
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Brief Description Section -->
+  <div class="row justify-content-center mb-4">
+    <div class="col-lg-10">
+      <div class="agri-card p-4">
+        <h5 class="fw-bold text-dark border-bottom pb-2">
+          <i class="bi bi-file-earmark-medical text-success me-2"></i>Brief Description :
+        </h5>
+        <p class="text-secondary mt-3 mb-0" style="line-height: 1.8; font-size: 1.05rem;">
+          {{ desc }}
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Two Cards: Prevention Steps & Supplements -->
+  <div class="row justify-content-center g-4 mb-4">
+    <!-- Prevention Steps -->
+    <div class="col-lg-5">
+      <div class="agri-card p-4 h-100">
+        <h5 class="fw-bold text-dark border-bottom pb-2">
+          <i class="bi bi-shield-check text-success me-2"></i>Prevent This Plant Disease By follow below steps :
+        </h5>
+        <div class="mt-3 text-secondary" style="line-height: 1.8;">
+          <p>{{ prevent }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Recommended Supplements Card -->
+    <div class="col-lg-5">
+      <div class="agri-card p-4 h-100 text-center">
+        <h5 class="fw-bold text-dark border-bottom pb-2 text-start">
+          <i class="bi bi-capsule text-success me-2"></i>Supplements :
+        </h5>
+
+        <div class="my-3">
+          <img src="{{ simage }}" alt="{{ sname }}" class="img-fluid rounded border p-2" style="max-height: 200px; object-fit: contain; background: #fafafa;">
+        </div>
+
+        <h6 class="fw-bold text-dark mt-2 mb-3">
+          {{ sname }}
+        </h6>
+
+        <a href="{{ buy_link }}" target="_blank" rel="noopener noreferrer" class="btn btn-success btn-lg px-4 rounded-pill fw-bold">
+          <i class="bi bi-cart3 me-1"></i> Buy Product
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Probability Distribution Overview -->
+  {% if all_probs %}
+  <div class="row justify-content-center mb-4">
+    <div class="col-lg-10">
+      <div class="agri-card p-4">
+        <h6 class="fw-bold text-dark mb-3">
+          <i class="bi bi-bar-chart me-1"></i> Class Probability Distribution:
+        </h6>
+        <div class="row g-3">
+          {% for cname, prob in all_probs.items() %}
+          <div class="col-md-3 col-6">
+            <div class="p-2 border rounded text-center {% if cname in title %}bg-success-subtle border-success{% else %}bg-light{% endif %}">
+              <span class="d-block small text-muted">{{ cname }}</span>
+              <strong class="fs-6">{{ prob }}%</strong>
+              <div class="confidence-bar mt-1">
+                <div class="confidence-fill {% if cname in title %}bg-success{% else %}bg-secondary{% endif %}" style="width: {{ prob }}%;"></div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+
+  <!-- Bottom CTA & Translate -->
+  <div class="text-center mt-4">
+    <a href="/index" class="btn btn-outline-success px-4 rounded-pill me-2">
+      <i class="bi bi-arrow-repeat me-1"></i> Test Another Image
+    </a>
+    <a href="/market" class="btn btn-outline-primary px-4 rounded-pill me-2">
+      <i class="bi bi-bag-check me-1"></i> View All Supplements
+    </a>
+    <button type="button" onclick="googleTranslateElementInit()" class="btn btn-outline-secondary px-3 rounded-pill">
+      <i class="bi bi-translate me-1"></i> Translate Page
+    </button>
+    <div id="google_translate_element" style="display: none; text-align: center; margin-top: 15px;"></div>
+  </div>
+
+</div>
+{% endblock body %}

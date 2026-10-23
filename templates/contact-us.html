@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% block pagetitle %}Contact Us - Rice Leaf AI System{% endblock pagetitle %}
+
+{% block body %}
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <div class="agri-card p-4 p-md-5">
+        <div class="text-center mb-4">
+          <h2 class="fw-bold text-success">🌾 Contact Agricultural Support</h2>
+          <p class="text-secondary">Have queries regarding rice crop disease diagnosis, fungicide recommendations, or model accuracy?</p>
+        </div>
+
+        <form onsubmit="alert('Thank you! Your query has been logged. Our agricultural expert will reach out shortly.'); return false;">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label fw-semibold">Farmer / Researcher Name</label>
+              <input type="text" class="form-control" required placeholder="e.g. Ramesh Kumar">
+            </div>
+            <div class="col-md-6">
+              <label class="form-label fw-semibold">Phone / WhatsApp Number</label>
+              <input type="tel" class="form-control" required placeholder="+91 98765 43210">
+            </div>
+            <div class="col-12">
+              <label class="form-label fw-semibold">District & State</label>
+              <input type="text" class="form-control" placeholder="e.g. Thanjavur, Tamil Nadu">
+            </div>
+            <div class="col-12">
+              <label class="form-label fw-semibold">Crop Variety & Symptoms Observed</label>
+              <textarea class="form-control" rows="4" placeholder="Describe symptoms (e.g. yellow leaf edges, brown spots on glumes)..."></textarea>
+            </div>
+            <div class="col-12 text-center mt-4">
+              <button type="submit" class="btn btn-success btn-lg px-5 rounded-pill fw-bold">
+                <i class="bi bi-send me-1"></i> Send Query
+              </button>
+            </div>
+          </div>
+        </form>
+
+        <div class="row g-3 text-center mt-5 pt-4 border-top">
+          <div class="col-md-4">
+            <i class="bi bi-telephone-fill text-success fs-3"></i>
+            <h6 class="fw-bold mt-2">Kisan Call Center</h6>
+            <p class="small text-muted mb-0">1800-180-1551 (Toll Free)</p>
+          </div>
+          <div class="col-md-4">
+            <i class="bi bi-envelope-fill text-primary fs-3"></i>
+            <h6 class="fw-bold mt-2">Technical Support</h6>
+            <p class="small text-muted mb-0">support@riceguard.ai</p>
+          </div>
+          <div class="col-md-4">
+            <i class="bi bi-geo-alt-fill text-danger fs-3"></i>
+            <h6 class="fw-bold mt-2">ICAR / CRRI</h6>
+            <p class="small text-muted mb-0">National Rice Research Institute</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock body %}

@@ -1,0 +1,122 @@
+{% extends 'base.html' %}
+{% block pagetitle %}Supplements & Fertilizers Market{% endblock pagetitle %}
+
+{% block body %}
+<div class="container py-4">
+  <!-- Header matching Chapter 7 -->
+  <div class="text-center my-4">
+    <h1 class="display-5 fw-bold text-success mb-1">
+      🛒 Supplements 🛒
+    </h1>
+    <p class="lead text-secondary fw-semibold">
+      Buy Supplements & Fertilizer at one place
+    </p>
+  </div>
+
+  <!-- Supplements Grid matching Chapter 7 Screenshot -->
+  <div class="row g-4 justify-content-center">
+    
+    <!-- Bacterial Blight Supplement -->
+    <div class="col-lg-3 col-md-6">
+      <div class="agri-card p-3 h-100 d-flex flex-column text-center">
+        <h6 class="text-danger fw-bold mb-3">Supplements (Diseased):</h6>
+        <div class="flex-grow-0 mb-3">
+          <img src="{{ url_for('static', filename='images/kocide_copper.png') }}" alt="Kocide 3000" class="img-fluid rounded border p-2" style="height: 230px; width: 100%; object-fit: contain; background: #fafafa;">
+        </div>
+        <div class="flex-grow-1">
+          <span class="d-block small text-muted fw-semibold">For Rice : Bacterial Blight</span>
+          <p class="fw-bold text-dark mt-1 mb-3" style="font-size: 0.95rem;">
+            Kocide 3000 Copper Hydroxide Bactericide/Fungicide
+          </p>
+        </div>
+        <div>
+          <a href="https://www.bighaat.com/search?q=kocide+copper+hydroxide" target="_blank" rel="noopener noreferrer" class="btn btn-success rounded-pill px-4 fw-bold">
+            Buy Product
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Brown Spot Supplement -->
+    <div class="col-lg-3 col-md-6">
+      <div class="agri-card p-3 h-100 d-flex flex-column text-center">
+        <h6 class="text-danger fw-bold mb-3">Supplements (Diseased):</h6>
+        <div class="flex-grow-0 mb-3">
+          <img src="{{ url_for('static', filename='images/mancozeb.png') }}" alt="Mancozeb 75 WP" class="img-fluid rounded border p-2" style="height: 230px; width: 100%; object-fit: contain; background: #fafafa;">
+        </div>
+        <div class="flex-grow-1">
+          <span class="d-block small text-muted fw-semibold">For Rice : Brown Spot</span>
+          <p class="fw-bold text-dark mt-1 mb-3" style="font-size: 0.95rem;">
+            Mancozeb 75% WP Contact Fungicide (Dithane M-45)
+          </p>
+        </div>
+        <div>
+          <a href="https://www.bighaat.com/search?q=mancozeb+75+wp" target="_blank" rel="noopener noreferrer" class="btn btn-success rounded-pill px-4 fw-bold">
+            Buy Product
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Healthy Fertilizer -->
+    <div class="col-lg-3 col-md-6">
+      <div class="agri-card p-3 h-100 d-flex flex-column text-center">
+        <h6 class="text-success fw-bold mb-3">Fertilizer (Healthy):</h6>
+        <div class="flex-grow-0 mb-3">
+          <img src="{{ url_for('static', filename='images/yara_npk.png') }}" alt="Yara Mila NPK" class="img-fluid rounded border p-2" style="height: 230px; width: 100%; object-fit: contain; background: #fafafa;">
+        </div>
+        <div class="flex-grow-1">
+          <span class="d-block small text-muted fw-semibold">For Rice : Healthy</span>
+          <p class="fw-bold text-dark mt-1 mb-3" style="font-size: 0.95rem;">
+            Yara Mila Complex NPK Rice Fertilizer
+          </p>
+        </div>
+        <div>
+          <a href="https://www.bighaat.com/search?q=npk+fertilizer" target="_blank" rel="noopener noreferrer" class="btn btn-success rounded-pill px-4 fw-bold">
+            Buy Product
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Leaf Blast Supplement -->
+    <div class="col-lg-3 col-md-6">
+      <div class="agri-card p-3 h-100 d-flex flex-column text-center">
+        <h6 class="text-danger fw-bold mb-3">Supplements (Diseased):</h6>
+        <div class="flex-grow-0 mb-3">
+          <img src="{{ url_for('static', filename='images/beam_tricyclazole.png') }}" alt="Beam Tricyclazole" class="img-fluid rounded border p-2" style="height: 230px; width: 100%; object-fit: contain; background: #fafafa;">
+        </div>
+        <div class="flex-grow-1">
+          <span class="d-block small text-muted fw-semibold">For Rice : Leaf Blast</span>
+          <p class="fw-bold text-dark mt-1 mb-3" style="font-size: 0.95rem;">
+            Beam (Tricyclazole 75% WP) Fungicide - Dow AgroSciences
+          </p>
+        </div>
+        <div>
+          <a href="https://www.bighaat.com/search?q=tricyclazole+beam" target="_blank" rel="noopener noreferrer" class="btn btn-success rounded-pill px-4 fw-bold">
+            Buy Product
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Additional Advisory Box -->
+  <div class="row justify-content-center mt-5">
+    <div class="col-lg-10">
+      <div class="agri-card p-4 bg-light border-0">
+        <h5 class="fw-bold text-dark mb-2">
+          <i class="bi bi-shield-exclamation text-warning-emphasis me-2"></i>Safe Handling Guidelines for Pesticides
+        </h5>
+        <ul class="text-secondary small mb-0 ps-3" style="line-height: 1.8;">
+          <li>Always wear protective gloves, masks, and eye protection while preparing and spraying chemicals.</li>
+          <li>Never spray against the wind direction or in extreme heat / high wind conditions.</li>
+          <li>Strictly adhere to recommended water dilution ratios (typically 500 liters of spray liquid per hectare).</li>
+          <li>Keep all agrochemicals securely locked away from children, livestock, and food storage.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock body %}

@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% block pagetitle %}Home - Rice Leaf Disease Detection{% endblock pagetitle %}
+
+{% block body %}
+<div class="container py-4">
+  <!-- Hero Section -->
+  <div class="text-center my-4">
+    <h1 class="display-4 fw-bold text-success">
+      🍁 Rice Leaf Disease Detection 🍁
+    </h1>
+    <p class="lead text-secondary fw-semibold mt-2">
+      This AI Engine Will Help To Detect Disease From Rice Leaf
+    </p>
+    <div class="mt-4">
+      <a href="/index" class="btn btn-success btn-lg px-5 py-3 rounded-pill shadow-sm fw-bold">
+        <i class="bi bi-cpu me-2"></i> Launch AI Engine
+      </a>
+    </div>
+  </div>
+
+  <!-- 4 Leaf Visual Showcase Cards (from Chapter 7) -->
+  <div class="row g-4 justify-content-center my-4">
+    <div class="col-6 col-md-3">
+      <div class="agri-card p-3 text-center">
+        <img src="{{ url_for('static', filename='images/sample_bacterial_blight.jpg') }}" alt="Bacterial Blight" class="img-fluid rounded mb-2" style="height: 190px; width: 100%; object-fit: cover;">
+        <h6 class="fw-bold text-dark mb-1">Bacterial Blight</h6>
+        <span class="badge bg-danger-subtle text-danger border border-danger">Bacterial Infection</span>
+      </div>
+    </div>
+    <div class="col-6 col-md-3">
+      <div class="agri-card p-3 text-center">
+        <img src="{{ url_for('static', filename='images/sample_brown_spot.jpg') }}" alt="Brown Spot" class="img-fluid rounded mb-2" style="height: 190px; width: 100%; object-fit: cover;">
+        <h6 class="fw-bold text-dark mb-1">Brown Spot</h6>
+        <span class="badge bg-warning-subtle text-warning-emphasis border border-warning">Fungal Spot</span>
+      </div>
+    </div>
+    <div class="col-6 col-md-3">
+      <div class="agri-card p-3 text-center">
+        <img src="{{ url_for('static', filename='images/sample_leaf_blast.jpg') }}" alt="Leaf Blast" class="img-fluid rounded mb-2" style="height: 190px; width: 100%; object-fit: cover;">
+        <h6 class="fw-bold text-dark mb-1">Leaf Blast</h6>
+        <span class="badge bg-info-subtle text-info-emphasis border border-info">Spindle Lesions</span>
+      </div>
+    </div>
+    <div class="col-6 col-md-3">
+      <div class="agri-card p-3 text-center">
+        <img src="{{ url_for('static', filename='images/sample_healthy.jpg') }}" alt="Healthy Leaf" class="img-fluid rounded mb-2" style="height: 190px; width: 100%; object-fit: cover;">
+        <h6 class="fw-bold text-dark mb-1">Healthy Leaf</h6>
+        <span class="badge bg-success-subtle text-success border border-success">Disease-Free</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Smart Features Section -->
+  <div class="row g-4 mt-4">
+    <div class="col-md-4">
+      <div class="agri-card p-4 h-100">
+        <div class="d-flex align-items-center mb-3">
+          <div class="p-3 bg-success-subtle text-success rounded-circle me-3">
+            <i class="bi bi-shield-check fs-3"></i>
+          </div>
+          <h5 class="fw-bold mb-0">High-Precision AI</h5>
+        </div>
+        <p class="text-secondary">MobileNetV2 transfer learning trained on thousands of labeled field samples to accurately detect foliar diseases with up to 96% accuracy.</p>
+        <a href="/index" class="text-success fw-semibold text-decoration-none">Test AI Engine &rarr;</a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="agri-card p-4 h-100">
+        <div class="d-flex align-items-center mb-3">
+          <div class="p-3 bg-primary-subtle text-primary rounded-circle me-3">
+            <i class="bi bi-prescription fs-3"></i>
+          </div>
+          <h5 class="fw-bold mb-0">Targeted Treatments</h5>
+        </div>
+        <p class="text-secondary">Get scientific dosages for fungicides, bactericides, bio-control agents, and balanced micronutrient supplements immediately upon diagnosis.</p>
+        <a href="/market" class="text-primary fw-semibold text-decoration-none">Explore Remedies &rarr;</a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="agri-card p-4 h-100">
+        <div class="d-flex align-items-center mb-3">
+          <div class="p-3 bg-warning-subtle text-warning-emphasis rounded-circle me-3">
+            <i class="bi bi-bank fs-3"></i>
+          </div>
+          <h5 class="fw-bold mb-0">Govt Support & Schemes</h5>
+        </div>
+        <p class="text-secondary">Stay informed about PM-KISAN, PMFBY crop insurance, KCC credit, and NFSM subsidies to safeguard your farm income.</p>
+        <a href="/govt-schemes" class="text-warning-emphasis fw-semibold text-decoration-none">View Schemes &rarr;</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock body %}

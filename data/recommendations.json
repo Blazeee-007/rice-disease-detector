@@ -1,0 +1,66 @@
+{
+  "Bacterial Blight": {
+    "disease_name": "Rice : Bacterial Blight",
+    "description": "Bacterial Blight is caused by Xanthomonas oryzae pv. oryzae. It is one of the most serious diseases of rice in Southeast Asia. It affects plants at all growth stages, producing water-soaked stripes that turn yellow and necrotic along leaf margins, severely reducing photosynthesis and grain filling.",
+    "symptoms": [
+      "Water-soaked striped lesions along leaf margins",
+      "Lesions enlarge, turn yellow to grayish-white with wavy borders",
+      "Milky bacterial ooze appears on lesions in high humidity",
+      "Severe 'kresek' phase causes complete wilting of young seedlings"
+    ],
+    "possible_steps": "Drain excess water from affected fields. Avoid top-dressing with nitrogen fertilizers when disease is active. Spray Copper Oxychloride (2.5 g/L) or Copper Hydroxide (Kocide 3000 at 2 g/L) combined with Streptocycline (1 g in 10 L). Practice crop rotation and use resistant cultivars (such as Swarna-Sub1 or IR64).",
+    "supplement_name": "Kocide 3000 Copper Hydroxide Bactericide/Fungicide",
+    "supplement_image": "/static/images/kocide_copper.png",
+    "buy_link": "https://www.bighaat.com/search?q=kocide+copper+hydroxide",
+    "severity": "High",
+    "color": "#c0392b"
+  },
+  "Brown Spot": {
+    "disease_name": "Rice : Brown Spot",
+    "description": "Brown Spot is a fungal disease of rice caused by Helminthosporium oryzae (Bipolaris oryzae). It is one of the oldest known diseases of rice and was responsible for the Great Bengal Famine of 1943. The disease appears as oval to circular spots on the leaf blade, sheath, and grains. Spots are typically brown with a yellow halo. It thrives in warm temperatures (25-30°C) with high humidity and is more common in nutrient-deficient soils, resulting in 5-45% yield loss.",
+    "symptoms": [
+      "Small circular to oval reddish-brown spots on leaves",
+      "Spots enlarge with a dark brown margin and gray/yellow halo",
+      "Severe infection causes leaves to dry up and die prematurely",
+      "Dark brown spots on glumes leading to unviable or discolored seeds"
+    ],
+    "possible_steps": "Treat seeds with hot water (53 degrees C for 10-12 minutes) or fungicides like Captan or Thiram before planting. Apply balanced fertilizers, especially potassium and silicon, to strengthen plant immunity. Use resistant varieties where available. Spray Mancozeb 75% WP at 2g per litre of water at 7-10 day intervals. Propiconazole 25% EC can be used as a curative fungicide. Remove infected crop debris and practice crop rotation. Ensure adequate plant nutrition to prevent nutrient deficiency stress.",
+    "supplement_name": "Mancozeb 75% WP Contact Fungicide (Dithane M-45)",
+    "supplement_image": "/static/images/mancozeb.png",
+    "buy_link": "https://www.bighaat.com/search?q=mancozeb+75+wp",
+    "severity": "Medium",
+    "color": "#d35400"
+  },
+  "Leaf Blast": {
+    "disease_name": "Rice : Leaf Blast",
+    "description": "Leaf Blast is caused by the fungus Magnaporthe oryzae (Pyricularia oryzae). It is the most devastating disease of cultivated rice worldwide. It attacks all aboveground parts, creating spindle-shaped lesions with grayish centers and dark brown margins. In severe cases, it causes collar rot, node blast, and neck blast leading to total crop collapse.",
+    "symptoms": [
+      "Spindle-shaped elliptical lesions with gray/whitish centers",
+      "Lesions surrounded by dark brown or reddish borders",
+      "Lesions coalesce causing entire leaf blades to scorch and wither",
+      "Blackened nodes or broken panicle necks (neck blast)"
+    ],
+    "possible_steps": "Avoid excessive nitrogen application; split nitrogen into smaller doses. Ensure intermittent field drying rather than continuous deep flooding. Treat seeds with Tricyclazole before nursery sowing. At first symptom detection, apply Tricyclazole 75% WP (Beam) at 0.6 g/L or Isoprothiolane 40% EC at 1.5 mL/L. Plant blast-tolerant varieties like Improved Samba Mahsuri or BPT 5204.",
+    "supplement_name": "Beam (Tricyclazole 75% WP) Fungicide - Dow AgroSciences",
+    "supplement_image": "/static/images/beam_tricyclazole.png",
+    "buy_link": "https://www.bighaat.com/search?q=tricyclazole+beam",
+    "severity": "Critical",
+    "color": "#8e44ad"
+  },
+  "Healthy": {
+    "disease_name": "Rice : Healthy Leaf",
+    "description": "The rice leaf exhibits healthy green coloration, vigorous cellular structure, and no visible signs of fungal or bacterial lesions. Continue following standard nutrient and water management to maintain optimal yield potential.",
+    "symptoms": [
+      "Uniform vibrant green coloration",
+      "Intact leaf lamina and strong midrib",
+      "No spotting, water-soaking, or marginal scorching",
+      "Normal tiller emergence and panicle development"
+    ],
+    "possible_steps": "Maintain recommended NPK fertilizer schedule based on regular soil test recommendations. Apply balanced organic compost or Farm Yard Manure (FYM @ 10 t/ha). Implement alternate wetting and drying (AWD) water management to conserve water and strengthen root anchorage. Scout fields weekly for early pest/disease detection.",
+    "supplement_name": "Yara Mila Complex NPK Rice Fertilizer",
+    "supplement_image": "/static/images/yara_npk.png",
+    "buy_link": "https://www.bighaat.com/search?q=npk+fertilizer",
+    "severity": "None",
+    "color": "#27ae60"
+  }
+}

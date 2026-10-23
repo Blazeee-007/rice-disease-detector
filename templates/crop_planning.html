@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+{% block pagetitle %}Crop Planning - Rice Lifecycle Guide{% endblock pagetitle %}
+
+{% block body %}
+<div class="container py-4">
+  <div class="text-center my-4">
+    <h1 class="display-5 fw-bold text-success mb-1">
+      📅 Intelligent Crop Planning & Calendar 📅
+    </h1>
+    <p class="lead text-secondary fw-semibold">
+      Step-by-step lifecycle management for maximum yield and disease resistance
+    </p>
+  </div>
+
+  <!-- Rice Lifecycle Stages Timeline -->
+  <div class="row g-4 mb-5">
+    <div class="col-12">
+      <div class="agri-card p-4">
+        <h4 class="fw-bold text-dark border-bottom pb-2 mb-4">
+          <i class="bi bi-diagram-3 text-success me-2"></i>Rice Crop Growth Stages & Disease Alert Timeline
+        </h4>
+
+        <div class="row g-3 text-center">
+          <!-- Stage 1 -->
+          <div class="col-md-3 col-6">
+            <div class="p-3 border rounded h-100 bg-light">
+              <span class="badge bg-primary mb-2">Stage 1 (Days 1–25)</span>
+              <h6 class="fw-bold text-dark">Nursery & Seedling</h6>
+              <p class="small text-muted mb-2">Seed treatment with hot water / Carbendazim. Healthy root establishment.</p>
+              <span class="badge bg-danger-subtle text-danger border border-danger small">Risk: Kresek Blight</span>
+            </div>
+          </div>
+          <!-- Stage 2 -->
+          <div class="col-md-3 col-6">
+            <div class="p-3 border rounded h-100 bg-light">
+              <span class="badge bg-success mb-2">Stage 2 (Days 26–55)</span>
+              <h6 class="fw-bold text-dark">Tillering & Vegetative</h6>
+              <p class="small text-muted mb-2">Rapid leaf emergence and tiller count. Controlled nitrogen split doses.</p>
+              <span class="badge bg-warning-subtle text-warning-emphasis border border-warning small">Risk: Brown Spot</span>
+            </div>
+          </div>
+          <!-- Stage 3 -->
+          <div class="col-md-3 col-6">
+            <div class="p-3 border rounded h-100 bg-light">
+              <span class="badge bg-warning text-dark mb-2">Stage 3 (Days 56–85)</span>
+              <h6 class="fw-bold text-dark">Panicle & Flowering</h6>
+              <p class="small text-muted mb-2">Flag leaf protection is critical. Inspect collar and neck blast signs.</p>
+              <span class="badge bg-info-subtle text-info-emphasis border border-info small">Risk: Leaf & Neck Blast</span>
+            </div>
+          </div>
+          <!-- Stage 4 -->
+          <div class="col-md-3 col-6">
+            <div class="p-3 border rounded h-100 bg-light">
+              <span class="badge bg-secondary mb-2">Stage 4 (Days 86–125)</span>
+              <h6 class="fw-bold text-dark">Grain Filling & Harvest</h6>
+              <p class="small text-muted mb-2">Drain water 10 days before harvest. Ensure optimal moisture during threshing.</p>
+              <span class="badge bg-success-subtle text-success border border-success small">Target: 5–6 t/ha Yield</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Planning Advisory Cards -->
+  <div class="row g-4">
+    <!-- Water Management Strategy -->
+    <div class="col-md-6">
+      <div class="agri-card p-4 h-100">
+        <h5 class="fw-bold text-dark mb-3">
+          <i class="bi bi-droplet-half text-primary me-2"></i>Alternate Wetting & Drying (AWD)
+        </h5>
+        <p class="text-secondary small">
+          Continuous ponding of water is not mandatory and creates ideal conditions for fungal spores (Blast and Brown Spot). AWD reduces irrigation water by up to 30% while maintaining equivalent crop yield.
+        </p>
+        <ul class="text-secondary small ps-3">
+          <li>Keep 2–5 cm water layer during first 2 weeks after transplanting.</li>
+          <li>Allow water level to naturally recede 15 cm below ground before re-irrigation.</li>
+          <li>Keep flooded during flowering (day 60 to 80) to avoid panicle sterility.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Balanced Nutrition Calendar -->
+    <div class="col-md-6">
+      <div class="agri-card p-4 h-100">
+        <h5 class="fw-bold text-dark mb-3">
+          <i class="bi bi-flower1 text-success me-2"></i>Nutrient Management Schedule (NPK)
+        </h5>
+        <p class="text-secondary small">
+          Properly timed split application prevents nutrient leaching and builds physiological resistance to foliar pathogen entry.
+        </p>
+        <ul class="text-secondary small ps-3">
+          <li><strong>Basal Dose (Transplanting):</strong> Full dose of Phosphorus (P) + 50% Potassium (K) + 25% Nitrogen (N).</li>
+          <li><strong>Active Tillering (Day 25):</strong> 50% Nitrogen (N) top-dressing.</li>
+          <li><strong>Panicle Initiation (Day 55):</strong> 25% Nitrogen (N) + remaining 50% Potassium (K).</li>
+          <li><strong>Zinc Application:</strong> 25 kg/ha ZnSO₄ basal dose to avert khaira disease.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock body %}

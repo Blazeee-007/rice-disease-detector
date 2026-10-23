@@ -1,0 +1,115 @@
+{
+  "crops": [
+    {
+      "name": "Rice (Kharif)",
+      "season": "Kharif (June–November)",
+      "soil_type": ["Clayey", "Loamy"],
+      "ph_range": "5.5–6.5",
+      "water_requirement": "High (1200–2000 mm)",
+      "temperature": "20–37°C",
+      "rainfall": "150–200 cm",
+      "popular_varieties": ["IR64", "Swarna", "BPT 5204", "Improved Samba Mahsuri"],
+      "yield": "4–6 tonnes/ha",
+      "icon": "🌾",
+      "description": "Rice is the primary staple food crop of India, cultivated mainly during the Kharif season."
+    },
+    {
+      "name": "Wheat",
+      "season": "Rabi (October–March)",
+      "soil_type": ["Loamy", "Sandy Loam", "Clayey Loam"],
+      "ph_range": "6.0–7.5",
+      "water_requirement": "Medium (450–650 mm)",
+      "temperature": "10–25°C",
+      "rainfall": "75–100 cm",
+      "popular_varieties": ["HD 2967", "PBW 343", "GW 322", "K 307"],
+      "yield": "3.5–5.5 tonnes/ha",
+      "icon": "🌿",
+      "description": "Wheat is the second most important cereal crop in India, grown in Rabi season."
+    },
+    {
+      "name": "Maize",
+      "season": "Kharif & Rabi",
+      "soil_type": ["Well-drained Loamy", "Sandy Loam"],
+      "ph_range": "5.8–7.0",
+      "water_requirement": "Medium (500–800 mm)",
+      "temperature": "18–32°C",
+      "rainfall": "60–120 cm",
+      "popular_varieties": ["Ganga 5", "Deccan 101", "DHM 117", "Parkash"],
+      "yield": "5–8 tonnes/ha",
+      "icon": "🌽",
+      "description": "Maize is a versatile crop used for food, feed, and industrial purposes."
+    },
+    {
+      "name": "Sugarcane",
+      "season": "Year-round (15–18 months)",
+      "soil_type": ["Deep Loamy", "Black Cotton"],
+      "ph_range": "6.0–7.5",
+      "water_requirement": "Very High (1500–2500 mm)",
+      "temperature": "20–35°C",
+      "rainfall": "150–250 cm",
+      "popular_varieties": ["Co 86032", "Co 8014", "CoJ 64", "BO 91"],
+      "yield": "70–100 tonnes/ha",
+      "icon": "🎍",
+      "description": "Sugarcane is the primary source of sugar and a major commercial crop in India."
+    },
+    {
+      "name": "Cotton",
+      "season": "Kharif (May–November)",
+      "soil_type": ["Black Cotton Soil", "Deep Alluvial"],
+      "ph_range": "6.0–8.0",
+      "water_requirement": "Medium (700–1200 mm)",
+      "temperature": "25–35°C",
+      "rainfall": "50–150 cm",
+      "popular_varieties": ["Bt Cotton", "Narayanpur 1", "F-1861", "LRA 5166"],
+      "yield": "1.5–3 tonnes/ha (lint)",
+      "icon": "☁️",
+      "description": "Cotton is a major cash crop and the most important fibre crop of India."
+    },
+    {
+      "name": "Groundnut",
+      "season": "Kharif (June–October)",
+      "soil_type": ["Light Sandy", "Red Sandy Loam"],
+      "ph_range": "6.0–7.0",
+      "water_requirement": "Low to Medium (500–700 mm)",
+      "temperature": "20–30°C",
+      "rainfall": "50–75 cm",
+      "popular_varieties": ["TMV 2", "K 6", "TG 37A", "Dharani"],
+      "yield": "1.5–3 tonnes/ha",
+      "icon": "🥜",
+      "description": "Groundnut is the most important oilseed crop in India, rich in protein and oil."
+    },
+    {
+      "name": "Soybean",
+      "season": "Kharif (June–October)",
+      "soil_type": ["Well-drained Loamy", "Black Soil"],
+      "ph_range": "6.0–7.5",
+      "water_requirement": "Medium (450–700 mm)",
+      "temperature": "20–30°C",
+      "rainfall": "60–100 cm",
+      "popular_varieties": ["JS 335", "JS 93-05", "NRC 7", "Shilajit"],
+      "yield": "2–3 tonnes/ha",
+      "icon": "🫘",
+      "description": "Soybean is a high-protein legume crop used for oil, food, and feed."
+    },
+    {
+      "name": "Pulses (Moong / Urad)",
+      "season": "Kharif & Zaid",
+      "soil_type": ["Sandy Loam", "Loamy"],
+      "ph_range": "6.5–7.5",
+      "water_requirement": "Low (300–500 mm)",
+      "temperature": "25–35°C",
+      "rainfall": "25–75 cm",
+      "popular_varieties": ["IPM 02-3", "Pusa Vishal", "Pant U 19", "LBG 709"],
+      "yield": "0.8–1.5 tonnes/ha",
+      "icon": "🌱",
+      "description": "Pulses are important protein-rich crops that also fix atmospheric nitrogen."
+    }
+  ],
+  "soil_recommendations": {
+    "Clayey": ["Rice", "Sugarcane", "Wheat"],
+    "Loamy": ["Rice", "Wheat", "Maize", "Soybean"],
+    "Sandy Loam": ["Groundnut", "Maize", "Pulses"],
+    "Black Soil": ["Cotton", "Soybean", "Sugarcane"],
+    "Red Sandy Loam": ["Groundnut", "Pulses"]
+  }
+}
